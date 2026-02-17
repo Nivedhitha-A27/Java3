@@ -1,0 +1,31 @@
+import java.io.*;
+import java.util.*;
+class  AreaCalculator{
+    int area(int side){
+        int square=a*a;
+        return square ;
+   }  
+    int area(int length, int breadth) {
+        int rectangle=length*breadth;
+    return rectangle ;
+}
+    
+
+    int area(double pi, int r) {
+        int circle=pi*r*r;
+    return circle;
+    }
+}
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scan=new Scanner(System.in);
+        int a=scan.nextInt();
+        int b=scan.nextInt();
+        int c=scan.nextInt();
+        final Double pi=3.14;
+        AreaCalculator ac=new AreaCalculator();
+        System.out.println(ac.area(a));    
+        System.out.println(ac.area(a,b));    
+        System.out.println(ac.area(pi,c,c));    
+    }
+}
