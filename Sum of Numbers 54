@@ -1,0 +1,28 @@
+import java.io.*;
+import java.util.*;
+class  Calculator{
+    int sum(int a, int b) {
+        return a+b ;
+   }  
+    int sum(int a, int b, int c){
+        
+    return a+b+c ;
+}
+    double sum(double a, double b) {
+    return a+b;
+    }
+}
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scan=new Scanner(System.in);
+        int a=scan.nextInt();
+        int b=scan.nextInt();
+        int c=scan.nextInt();
+        double a1=scan.nextDouble();
+        double b1=scan.nextDouble();
+        Calculator ac=new Calculator();
+        System.out.println(ac.sum(a,b));    
+        System.out.println(ac.sum(a,b,c));    
+        System.out.println(ac.sum(a1,b1));    
+    }
+}
