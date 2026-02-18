@@ -1,0 +1,48 @@
+import java.util.*;
+
+class SumCalculator {
+
+    int sum(int a, int b) {
+        return a + b;
+    }
+
+    int sum(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    double sum(double a, double b) {
+        return a + b;
+    }
+}
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        SumCalculator calculator = new SumCalculator();
+
+        ArrayList<String> inputs = new ArrayList<>();
+
+        while (sc.hasNextLine()) {
+            inputs.add(sc.nextLine());
+        }
+
+        if (inputs.size() == 2) {
+            if (inputs.get(0).contains(".") || inputs.get(1).contains(".")) {
+                double a = Double.parseDouble(inputs.get(0));
+                double b = Double.parseDouble(inputs.get(1));
+                System.out.println(calculator.sum(a, b));
+            } else {
+                int a = Integer.parseInt(inputs.get(0));
+                int b = Integer.parseInt(inputs.get(1));
+                System.out.println(calculator.sum(a, b));
+            }
+        } 
+        else if (inputs.size() == 3) {
+            int a = Integer.parseInt(inputs.get(0));
+            int b = Integer.parseInt(inputs.get(1));
+            int c = Integer.parseInt(inputs.get(2));
+            System.out.println(calculator.sum(a, b, c));
+        }
+
+    }
+}
